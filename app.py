@@ -2,7 +2,7 @@ import numpy as np
 from flash import Flask, request, jsonify, render_template
 import pickle
 
-app = Flash(__name__)
+app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
 
 @app.route('/')
